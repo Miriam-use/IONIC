@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-button>  
+    <ion-title>
+      Lista de Alumnos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-list line="none">
+    <ion-item *ngFor="let heroe of heroes">
+      <ion-toolbar>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+            <ion-select interface="action-sheet">
+              <ion-select-option value="telf" >Llamar</ion-select-option>
+              <ion-select-option value="correo" (click)="share()">Envia Correo</ion-select-option>
+            </ion-select>
+          </ion-button>
+        </ion-buttons>
+      <ion-avatar>
+        <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png"></ion-img>
+      </ion-avatar>
+      <ion-label>{{heroe.nombre}} | Curso: {{heroe.matricula}}</ion-label>
+    </ion-toolbar>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="primary" routerLink="/dato">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

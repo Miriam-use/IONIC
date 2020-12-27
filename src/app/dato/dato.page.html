@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Datos Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label position="floating" > Nombre</ion-label>
+    <ion-input type="text" name="nombre" [(ngModel)]="heroe.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" > Correo Electronico</ion-label>
+    <ion-input type="text" name="email" [(ngModel)]="heroe.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" > Telefono</ion-label>
+    <ion-input type="text" name="telefono" [(ngModel)]="heroe.telefono"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" > Matricula</ion-label>
+    <ion-input type="text" name="matricula" [(ngModel)]="heroe.matricula"></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-button color="primary" expand="block" (click)="saveHeroe()">Guardar</ion-button>
+
+  <br>
+  <ion-button color="danger" expand="block" routerLink="/home">Cancelar</ion-button>
+</ion-content>
